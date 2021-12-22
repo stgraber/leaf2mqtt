@@ -200,12 +200,14 @@ func run() error {
 }
 
 func mqttClimateSet(session *leaf.Session, mqttSession mqtt.Client, msg mqtt.Message, chError chan error) {
+	value := msg.Payload()
+
 	if !carHVACReady {
 		carHVACReady = true
+		log.Printf("[climate] Skipping initial request")
 		return
 	}
 
-	value := msg.Payload()
 	if string(value) == "on" {
 		err := turnClimateOn(session)
 		if err == nil {
