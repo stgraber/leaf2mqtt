@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/eclipse/paho.mqtt.golang v1.3.5
-	github.com/joeshaw/leaf v0.0.0-20220122201909-bedde11f442b
+	github.com/joeshaw/leaf v0.0.0-20220125003252-f59863eaa441
 	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9
 )
 
